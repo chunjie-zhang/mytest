@@ -1,11 +1,12 @@
-// function jc(son,father){
-//     var Temp = function(){};
-//     Temp.prototype = father.prototype;
-//     son.prototype = new Temp();
-//     son.prototype.constructor = son;
-//     son.prototype.uber = father.prototype;
-
-// }
+function jc(son,father){
+    var Temp = function(){};
+    Temp.prototype = father.prototype;
+    son.prototype = new Temp();
+    son.prototype.constructor = son;
+    son.prototype.uber = father.prototype;
+    zhangchunjie
+    wfrqewgqeqevebre
+}
 
 // function clone(obj,deep){
 //     if(Array.isArray(obj)){
