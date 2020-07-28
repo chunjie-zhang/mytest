@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <style>
+    *{
+        margin:0px;
+    }
+    .container{
+        width:100%;
+        height:1080px;
+        background-color: #ccc;
+    }
+    .red{
+        float:left;
+        width:50%;
+        height:100%;
+        background-color: red;
+    }
+    .black{
+        float:right;
+        width:50%;
+        height:100%;
+        background-color: black;
+    }
+</style> -->
+
+<body>
+    
+
+    <!-- <div class="container">
+        <div class="red"></div>
+        <div class="black"></div>
+    </div> -->
+    <!-- <script type="text/javascript">  
+            function  Person(name,age,love){  //原父类方法和私有属性以及方法
+                this.name=name;  
+                this.age=age;  
+                this.love=love;  
+                this.say=function say(){  
+                    alert("姓名："+name);  
+                }  
+            }  
+         
+            //call方式  
+            function student(name,age){  // 可以理解为在student的执行环境里执行person的属性和方法
+                Person.call(this,name,age);  
+            }  
+         
+            //apply方式  
+            function teacher(name,love){   //可以理解为在student的执行环境里执行person的属性和方法 
+                Person.apply(this,[name,love]);  
+                //Person.apply(this,arguments); //跟上句一样的效果，arguments  
+           //  Print.apply(this,arguments);  //还可以实现继承多个父类，但是原型 prototype只能继承一个父类！！！切记
+            }  
+         
+            // Function.prototype.myBind = function(target){
+//      var self = this;
+//      var args = [].slice.call(arguments,1);
+//      var temp = function(){};
+//      var f = function(){
+//         var _args = [].slice.call(arguments,0);
+//         return self.apply(this instanceof temp ?this:(target||window),args.concat(_args));
+//      }
+//      temp.prototype = self.prototype;
+//      f.prototype = new temp;
+//      return f;
+// }
+
+//  function Node(name,value,age){
+//    return name+age+value;
+    
+//  }
+//  console.log(Node.myBind(this,'zhang',22,'chunjie')());
+
+
+// 实现一个函数柯里化的原生bind方法  
+Function.prototype._bind = function (context) {
+  let self = this;
+  let firstArg = Array.prototype.slice.call(arguments,1);
+  return function () {
+    let secArg = Array.prototype.slice.call(arguments);
+    let finishArg = firstArg.concat(secArg);
+    return self.apply(context,finishArg);
+  }
+}
+
+         
+            var per=new Person("武凤楼",25,"魏荧屏"); //输出：“武凤楼”  
+            per.say();  
+            var stu=new student("曹玉",18);//输出：“曹玉”  
+            stu.say();  
+            var tea=new teacher("秦杰",16);//输出：“秦杰”  
+            tea.say();  
+         
+        </script>   -->
+
+    <!-- <div>1</div>
+        <button>按钮</button>
+        <script>
+            var odiv = document.getElementsByTagName("div")[0];
+            var obtn = document.getElementsByTagName("button")[0];
+            function shottle(callback,delay){
+                var lasttime = 0;
+               return function (e){
+                var nowtime = new Date().getTime();
+                if(nowtime-lasttime>delay){
+                     callback.apply(this,arguments);
+                     lasttime = nowtime;
+                }
+               }
+                
+            }
+
+            function callback(){
+               odiv.innerHTML = parseInt(odiv.innerHTML)+1;
+            }
+            obtn.onclick = shottle(callback,1000);
+        </script> -->
+    <!-- 
+        <input type="text" id="oinp">
+        <script>
+            var oinp = document.getElementById("oinp");
+             
+             function ajax(callback,delay){
+                 var timer = null;
+                 return function(e){
+                     var _this = this,_arguments = arguments;
+                     clearTimeout(timer);
+                     timer = setTimeout(function(){
+                         callback.apply(_this,_arguments);
+                     },delay)
+                 }
+             }
+
+             function callback(e){
+                console.log(this.value);
+             }
+
+            oinp.oninput = ajax(callback,1000);
+        </script> -->
+
+    <script>
+        // function FindGreatestSumOfSubArray(array) {
+        //     // write code here
+        //     if (array.length < 0) return 0;
+        //     var sum = array[0];
+        //     var temp = array[0];
+        //     for (var i = 1; i < array.length; i++) {
+        //         if (temp < 0) {
+        //             temp = array[i];
+        //         } else {
+        //             temp = temp + array[i];
+        //         }
+        //         if (temp > sum) {
+        //             sum = temp;
+        //         } else {
+        //             sum = sum;
+        //         }
+        //     }
+        //     return sum;
+        // }
+        // console.log(FindGreatestSumOfSubArray([1, -7, 8, 2, -9, 41, 3]));
+
+
+        // function join(arr){
+        //    var temp = arr[0];
+        //    var sum = arr[0];
+        //    for(var i=1;i<arr.length;i++){
+        //        if(temp<0){
+        //            temp = arr[i];
+        //        }else{
+        //            temp = temp+arr[i];
+        //        }
+        //    }
+        //    if(temp<sum){
+        //        sum = sum;
+        //    }else{
+        //      sum = temp 
+        //    }
+        //    return sum
+        // }
+        // console.log(join([1, -7, 8, 2, -9, 41]))
+
+
+    </script>
+</body>
+
+</html>

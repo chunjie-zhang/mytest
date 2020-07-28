@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二级联动</title>
+</head>
+<body>
+    省: <select id="sheng"></select>
+    市: <select id="shi"></select>
+    <script>
+        var sheng=["请选择省份/市","江苏","天津"];
+        var shi = [["请选择市/区"],["盐城","连云港","宿迁"],["南开","西青"]];
+
+        var osheng = document.getElementById("sheng");
+        var oshi = document.getElementById("shi");
+
+        for(var i=0;i<sheng.length;i++){
+            var osp = document.createElement("option");
+            osp.innerText = sheng[i];
+            osheng.appendChild(osp);
+        }
+        osheng.onchange = function(){
+             var index = this.selectedIndex;
+             oshi.innerHTML = "";
+             for(var j=0;j<shi[index].length;j++){
+                var osp1 = document.createElement("option");
+                osp1.innerText = shi[index][j];
+                oshi.appendChild(osp1);
+             }
+        }
+    </script>
+</body>
+</html> -->

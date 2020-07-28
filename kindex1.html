@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>无标题文档</title>
+<style>
+body{margin:0; padding:0}
+#to_top{
+width:30px;
+height:40px;
+padding:20px;
+font:14px/20px arial;
+text-align:center;
+background:#06c;
+position:absolute;
+cursor:pointer;
+color:#fff
+}
+</style>
+<script>
+
+鼠标跟随
+
+window.onload = function(){
+ var oTop = document.getElementById("to_top");
+ 
+ window.onmousemove = function(evt){
+  var oEvent = evt || window.event;
+  oTop.style.left = oEvent.offsetX  +10 +"px";
+  oTop.style.top = oEvent.offsetY + 10 + "px";
+ }
+}
+
+鼠标拖拽
+window.onload=function(){
+ var oTop = document.getElementById("to_top");
+ oTop.onmousedown = function(e){
+    var otopLeft = e.clientX-this.offsetLeft;
+    var otopTop = e.clientY-this.offsetTop;
+    console.log(otopLeft,otopTop);
+
+    window.onmousemove = function(e){
+  oTop.style.left = e.clientX-otopLeft +"px";
+  oTop.style.top = e.clientY-otopTop + "px";
+ }
+ oTop.onmouseup = function(e){
+    oTop.onmousedown = window.onmousemove = null;
+ }
+
+ }
+ 
+}
+ </script>
+ </head>
+ <body style="height:1000px;">
+<a href="#">文字</a>
+<div id="to_top">鼠标跟随</div>
+</body>
+</html> -->
